@@ -1,0 +1,54 @@
+
+\newlength{\nputtt}
+\setlength{\nputtt}{\textwidth}
+\addtolength{\nputtt}{-120pt}
+\let\oldextrarowheight=\extrarowheight
+\let\oldtabcolsep=\tabcolsep
+\def\npucell#1{\makecell[cl]{\parbox{\nputtt}{\vskip4pt #1 \vskip4pt}}}
+\def\npuccell#1{\makecell[cl]{#1}}
+% \tabcolsep=0pt
+% \extrarowheight=15pt
+\section{7月21日上午大会日程}
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering}p{80pt}|X|}
+    \hline
+    08:30--08:45 & \npuccell{{\bf 开幕式}\\  校领导及嘉宾致辞\\主持人：许志强}  \\  \hline
+    08:45--09:40 & \npuccell{{\bf 颁奖典礼} \\ 
+        青年创新奖颁奖典礼   \\
+        \qquad 颁奖嘉宾: 江松 \\
+        \qquad 获奖人: 徐岩, 许志强, 杨周旺\\
+        % \quad 提名奖: 邓伟华, 刘歆, 袁晓明, 仲杏慧\\
+        冯康奖颁奖典礼   \\
+        \qquad 颁奖嘉宾: 鄂维南, 崔俊芝\\
+        \qquad 获奖人: 李若, 吴国宝\\
+        \qquad 获奖人工作介绍: 张平文, 汤涛\\
+    } \\ \hline
+    09:40--10:00 & \npuccell{{\bf 学会工作报告} \\ 报告人：理事长\quad 鄂维南} \\ \hline
+    10:00--10:30 & \npuccell{\bf 茶歇} \\\hline
+    10:30--11:15 & \npucell{{\bf 冯康科学计算奖获得者报告}\\ 
+        \plenary{动理学方程的模型约化}{李若}{教授}{北京大学}{7月21日, 10:30--11:15}{abs30001}{陈志明}}\\ \hline
+    11:15--12:00 & \npucell{{\bf 冯康科学计算奖获得者报告}\\
+        \plenary{Multiple Relational Ranking in Tensor: Theory, Algorithms and Applications}{吴国宝}{教授}{香港浸会大学}{7月21日, 11:15--12:00}{abs30002}{袁亚湘}} \\\hline
+\end{tabularx}
+\section{7月22日上午大会日程}
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering}p{80pt}|X|}
+    \hline
+    08:30--09:15 & \npucell{\plenary{大数据分析技术图谱与研究举例}{徐宗本}{院士}{西安交通大学}{7月22日, 08:30--09:15}{abs20001}{聂玉峰}} \\ \hline
+    09:15--10:00 & \npucell{\plenary{Mixed Finite Element Methods based on Differential Complexes}{陈  龙}{教授}{University of California at Irvine}{7月22日, 09:15--10:00}{abs20002}{聂玉峰}} \\ \hline
+    10:00--10:30 & \npuccell{\bf 茶歇} \\\hline
+    10:30--11:15 & \npucell{\plenary{Fully Nonlinear Second Order PDEs and Their Numerical Solutions}{凤小兵}{教授}{美国田纳西大学, 西北工业大学}{7月22日, 10:30--11:15}{abs20003}{宋永忠}} \\ \hline
+    10:30--11:15 & \npucell{\plenary{Alternating direction methods with multipliers for optimization problems involving nonconvex functions}{韩德仁}{教授}{南京师范大学}{7月22日, 11:15--12:00}{abs20004}{宋永忠}} \\ \hline
+\end{tabularx}
+\section{7月23日上午大会日程}
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering}p{80pt}|X|}
+    \hline
+    08:30--09:15 & \npucell{\plenary{千万核可扩展全隐式求解器：算法、实现与应用}{杨  超}{研究员}{中国科学院软件研究所}{7月23日, 08:30--09:15}{abs20005}{包刚}} \\ \hline
+    09:15--10:00 & \npucell{\plenary{Weak Galerkin Finite Element Scheme and Its Applications}{张  然}{教授}{吉林大学}{7月23日, 09:15--10:00}{abs20006}{包刚}} \\ \hline
+    10:00--10:30 & \npuccell{\bf 茶歇} \\\hline
+     10:30--11:15 & \npucell{\plenary{大规模矩阵近似的随机算法}{张志华}{教授}{北京大学}{7月23日, 10:30--11:15}{abs20007}{羊丹平}} \\ \hline
+    11:15--12:00 & \npucell{\plenary{三维不可压磁流体方程组的并行计算方法}{郑伟英}{研究员}{中国科学院数学与系统科学研究院}{7月23日, 11:15--12:00}{abs20008}{羊丹平}} \\ \hline
+\end{tabularx}
+\let\tabcolsep=\oldtabcolsep
+\let\extrarowheight=\oldextrarowheight

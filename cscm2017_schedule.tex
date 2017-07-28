@@ -1,0 +1,382 @@
+\documentclass[UTF8]{book}
+
+\usepackage{titletoc}
+\usepackage{caption}
+\usepackage{ulem}
+\usepackage[UTF8]{ctexcap} % 
+\usepackage{float}
+\usepackage{lipsum}  % for test
+\usepackage{array}
+\usepackage{color}
+%\usepackage{xcolor}
+\usepackage{colortbl} % need array and color
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\usepackage{graphicx}
+%\colorlet{darkblue}{cyan!50!black}
+\definecolor{darkblue}{HTML}{0000FF}
+\usepackage[unicode=true, colorlinks=true,linkcolor=darkblue, pdfborder={0 0 0}]{hyperref}
+% \usepackage[unicode=true]{hyperref}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{makeidx}
+\makeindex
+\usepackage[totoc]{idxlayout}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xifthen}
+% \usepackage[perpage]{footmisc}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage[final]{pdfpages}
+\usepackage[titletoc,toc]{appendix}
+\usepackage[bottom]{footmisc}
+\input{format_setting.tex}
+
+
+\title{计算数学年会}
+\author{npu}
+\date{\today}
+\flushbottom
+\begin{document}
+
+\hascover{%
+\pdfbookmark[0]{封面}{anchor0}%
+\includepdf[pages=-,width=\paperwidth,height=\paperheight]{figures/front.pdf}%
+}
+\begin{titlepage}
+  \vspace*{10mm}
+  \begin{center}
+    {\bf\lishu\zihao{-0} 第十一届全国计算数学年会}\\[100mm]
+    {\bf\Large 2017年 7月 21--23 日}\\[5mm]
+    {\bf\Large 中国\quad 西安}\\[30mm]
+    {\bf\large 主办单位: 中国数学会计算数学分会}\\[5mm]
+    {\bf\large 承办单位: 西北工业大学 \quad 中国科学院计算数学与科学工程计算研究所}\\[5mm]
+    {\bf\large 资助单位: 国家自然科学基金委员会}
+    %{\includegraphics[width=0.4\textwidth]{figures/cms.png} \quad \includegraphics[width=0.4\textwidth]{figures/nwpu.png}}
+  \end{center}
+\end{titlepage}
+\frontmatter
+% \setcounter{page}{1}
+\pagenumbering{Roman}
+% \pdfbookmark[0]{会议委员会}{anchor2}
+\section*{}
+\addcontentsline{toc}{chapter}{会议委员会}
+{\bf\huge \hfill 会议委员会\hfill}
+\thispagestyle{empty}
+\vskip30pt
+\newlength{\npulen}
+\settowidth\npulen{三个字}
+\def\npuitem#1#2#3{%
+    \indent\makebox[\npulen][s]{#1}\quad#2\quad{({\it\zihao{5}#3})}\\%
+}
+\noindent {\Large\bf 一、会议学术委员会}\\
+\indent {\bf 主席:}\\ 
+\npuitem{鄂维南}{院士}{北京大学, 中国数学会计算数学分会理事长}
+\npuitem{汪劲松}{教授}{西北工业大学, 校长} 
+
+\indent {\bf 委员}(按姓氏拼音排序){\bf :}\\
+\npuitem{陈志明}{研究员}{中国科学院, 中国数学会计算数学分会常务副理事长} 
+\npuitem{崔俊芝}{院士}{中国科学院} 
+\npuitem{江松}{院士}{北京应用物理与计算数学研究所, 中国数学会计算数学分会副理事长} 
+\npuitem{林群}{院士}{中国科学院} 
+\npuitem{石钟慈}{院士}{中国科学院, 中国数学会计算数学分会名誉理事长} 
+\npuitem{舒其望}{教授}{美国布朗大学, 中国科技大学, 中国数学会计算数学分会指导委员会主任}
+\npuitem{宋永忠}{教授}{南京师范大学, 中国数学会计算数学分会副理事长} 
+\npuitem{许跃生}{教授}{中山大学, 中国数学会计算数学分会副理事长} 
+\npuitem{羊丹平}{教授}{华东师范大学, 中国数学会计算数学分会副理事长} 
+\npuitem{袁亚湘}{院士}{中国科学院, 中国数学会理事长, 中国数学会计算数学分会指导委员会主任} 
+\npuitem{张平文}{院士}{北京大学, 中国工业与应用数学学会理事长} 
+
+\noindent{\Large\bf 二、会议组织委员会}\\
+\indent{\bf 主席:}\\
+\npuitem{宋永忠}{教授}{南京师范大学, 中国数学会计算数学分会副理事长} 
+\npuitem{许志强}{研究员}{中国科学院, 中国数学会计算数学分会秘书长} 
+\npuitem{聂玉峰}{教授}{西北工业大学, 理学院副院长} 
+
+\indent{\bf 委员}(按姓氏拼音排序){\bf :} \\
+\npuitem{李明}{教授}{太原理工大学, 中国数学会计算数学分会副秘书长}
+\npuitem{谢小平}{教授}{四川大学, 中国数学会计算数学分会副秘书长} 
+\npuitem{徐立伟}{教授}{电子科技大学, 中国数学会计算数学分会副秘书长} 
+\npuitem{杨志坚}{教授}{武汉大学, 中国数学会计算数学分会副秘书长} 
+\npuitem{凤小兵}{教授}{美国田纳西大学, 西北工业大学}
+\npuitem{蔡力}{副教授}{西北工业大学, 应用数学系副主任}
+
+\clearpage
+\pdfbookmark[0]{目录}{anchor}
+\tableofcontents
+
+\def\npusection#1{\section{#1}}
+
+\mainmatter
+\chapter{会场信息及简要日程}
+
+\npusection{会议场地信息}
+
+开幕式与所有的大会报告均在陕西宾馆大礼堂。分会场信息详见下表。
+
+\def\zhongsan{ 10号楼6层，第一会议室 }
+\def\zhonger{ 12号楼2层，第一会议室 }
+\def\zhongyi{ 19号楼2层，第九会议室 }
+\def\daer{ 12号楼3层，第三会议室 }
+\def\dayi{ 19号楼2层，第十会议室 }
+\def\dasan{ 10号楼6层，第二会议室 }
+\def\xiaoyi{ 19号楼2层，第二会议室 }
+\def\xiaoer{ 19号楼2层，第三会议室 }
+\def\xiaosan{ 19号楼2层，第四会议室 }
+\def\npusroom{19号楼2层, 第五会议室}
+% \npusection{会议室列表}
+\begin{table}[H]
+\begin{center}
+% \caption{会议室列表}
+\begin{tabular}{lcc}
+    \toprule
+    会场位置 & \phantom{空白} & 会场名称\\ \midrule
+    % 12号楼2层 & \phantom{空白} & 第六会议室 \\
+    10号楼6层 & \phantom{空白} & 第一会议室 \\
+    10号楼6层 & \phantom{空白} & 第二会议室 \\
+    % 10号楼6层 & \phantom{空白} & 第二会议室 \\
+    12号楼2层 & \phantom{空白} & 第一会议室 \\
+    12号楼3层 & \phantom{空白} & 第三会议室 \\
+    % 19号楼2层 & \phantom{空白} & 五月阁 \\
+    19号楼2层 & \phantom{空白} & 第二会议室 \\
+    19号楼2层 & \phantom{空白} & 第三会议室 \\
+    19号楼2层 & \phantom{空白} & 第四会议室 \\ 
+    19号楼2层  & \phantom{空白} & 第五会议室 \\ % add 
+    19号楼2层 & \phantom{空白} & 第九会议室 \\
+    19号楼2层 & \phantom{空白} & 第十会议室 \\\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+{{\bf 注:} 19号楼即为西安陕宾雀笙国际酒店。}
+%{
+%     \begin{center}
+% \begin{tabular}{l|l}
+%     \hline
+%     会场信息 & 会场编号  \\ \hline
+%     {10号楼，6层第一会议室} & 10-6-第一-140 \\ \hline
+%     {10号楼，6层第二会议室} & 10-6-第二-240 \\ \hline
+%     {12号楼，2层第一会议室} & 12-2-第一-142 \\ \hline
+%     {12号楼，3层第三会议室} & 12-3-第三-250 \\ \hline
+%     {19号楼(酒店二楼)，第十会议室} & 19-2-雀笙-380 \\ \hline
+%     {19号楼(酒店二楼)，五月阁} & 19-2-五月-380 \\ \hline
+%     {19号楼(酒店二楼)，第九会议室} & 19-2-第九-190 \\ \hline
+%     {19号楼(酒店二楼)，第二会议室} & 19-2-第二-080 \\ \hline
+%     {19号楼(酒店二楼)，第三会议室} & 19-2-第三-080 \\ \hline
+%     {19号楼(酒店二楼)，第四会议室} & 19-2-第四-080 \\ \hline
+% \end{tabular}
+% \end{center}
+%}
+%\clearpage
+%\section{午餐和晚餐}
+%\lipsum[2]
+%\pagebreak[4]
+%\clearpage
+
+%\begin{landscape}
+% \includegraphics[width=0.9\textwidth]{figures/map1.jpg}
+\hasmap{\begin{center}
+\begin{figure}
+\includegraphics[width=1.25\textwidth, angle=90]{figures/shanxibinguan.jpg}
+\caption{陕西宾馆平面示意图}
+\end{figure}
+\end{center}}
+%\end{landscape}
+
+%\center{
+  %\rowcolors{1}{gray}{}
+  %\begin{tabular}{l|l}
+    %地点  &  功能  \\
+     %翱翔大厅  & A111 \\
+    %教学东楼201  & B201 \\
+    %教学东楼202  & B202 \\
+    %教学东楼202  & B202 
+  %\end{tabular}
+%}
+
+\pagebreak[4]
+\input{auto_session.tex}
+
+\npusection{简要日程}
+\def\npuheadercolor{white}
+\def\npulightgray{white}
+\def\npudarkgray{white}
+\def\teabreak#1{茶歇 \small #1}
+\def\mtb{\teabreak{10:40--11:10}}
+\def\atb{\teabreak{}}
+\def\npubfsp#1#2{#1 \vskip-5pt {\zihao{5}#2}}
+\vskip-10pt
+\begin{schedule}
+\fboxsep=0pt
+\fbox{%
+\fboxsep=1pt
+\begin{tabular}[t]{cccc}
+\mbox{\begin{tabular}[t]{l}
+    \eventbox[2][\npuheadercolor]{\centering \bf 时间} 
+    % \eventbox[6][\npuheadercolor]{\centering \bf 08:30--09:00} 
+    \eventbox[9][\npuheadercolor]{\centering \bf 08:30--10:00}
+    \eventbox[3][\npuheadercolor]{\centering \bf 10:00--10:30}   
+    \eventbox[9][\npuheadercolor]{\centering \bf 10:30--12:00}  
+    %  \eventbox[6][\npuheadercolor]{\centering \bf 11:00--12:00}  
+    \eventbox[6][\npuheadercolor]{\centering \bf 12:00--13:30}
+    % \eventbox[6][\npuheadercolor]{\centering \bf 13:00--14:00}  
+    \eventbox[12][\npuheadercolor]{\centering \bf 14:00--16:00}  
+    %\eventbox[6][\npuheadercolor]{\centering \bf 15:00--16:00}  
+    \eventbox[3][\npuheadercolor]{\centering \bf 16:00--16:20}  
+    \eventbox[12][\npuheadercolor]{\centering \bf 16:20--18:00} 
+    %\eventbox[2][\npuheadercolor]{\centering \bf 18:00--18:20}
+    \eventbox[6][\npudarkgray]{\centering \bf 18:30--20:00}
+    % \eventbox[6][\npudarkgray]{\centering {\quad}}
+  \end{tabular}} &
+\mbox{\begin{tabular}[t]{l}
+    \eventbox[ 2][\npuheadercolor]{\centering\bf 7月21日}  %
+    \eventbox[ 3][\npudarkgray]{ {开幕式}  \\\vskip-5pt\small 8:30-8:45}
+    \eventbox[ 3][\npudarkgray]{ {颁奖典礼}  \\\vskip-5pt\small  8:45-9:40}
+    \eventbox[ 3][\npudarkgray]{ {学会工作报告} \\\vskip-5pt\small 9:40-10:00}
+    \eventbox[ 3][\npulightgray]{茶歇}
+    \eventbox[ 4.5][\npudarkgray]{ \npubfsp{李若教授\\}{10:30-11:15}}
+    \eventbox[ 4.5][\npulightgray]{ \npubfsp{吴国宝教授\\}{11:15-12:00}}
+    \eventbox[ 6][\npudarkgray]{午餐}
+    \eventbox[12][\npulightgray]{分会场报告1\\ \sOne}
+    \eventbox[ 3][\npudarkgray]{\atb}
+    \eventbox[12][\npulightgray]{分会场报告2\\ \sTwo}
+    \eventbox[6][\npudarkgray]{\centering {晚餐}}
+  \end{tabular}} &
+\mbox{\begin{tabular}[t]{l}
+    \eventbox[ 2][\npuheadercolor]{\centering\bf 7月22日}  %
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{徐宗本院士\\}{8:30-9:15}}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{陈龙教授\\}{9:15-10:00}}
+    \eventbox[ 3][\npulightgray]{茶歇}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{凤小兵教授\\}{10:30-11:15}}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{韩德仁教授\\}{11:15-12:00}}
+    \eventbox[ 6][\npudarkgray]{午餐}
+    \eventbox[12][\npulightgray]{分会场报告3\\ \sThree}
+    \eventbox[ 3][\npudarkgray]{\atb}
+    \eventbox[12][\npulightgray]{分会场报告4\\ \sFour}
+    \eventbox[6][\npudarkgray]{\centering {晚餐}}
+  \end{tabular}} &
+\mbox{\begin{tabular}[t]{l}
+    \eventbox[ 2][\npuheadercolor]{\centering\bf 7月23日}  %
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{杨超研究员\\}{8:30-9:15}}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{张然教授\\}{9:15-10:00}}
+    \eventbox[ 3][\npulightgray]{茶歇}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{张志华教授\\}{10:30-11:15}}
+    \eventbox[ 4.5][\npudarkgray]{\npubfsp{郑伟英研究员\\}{11:15-12:00}}
+    \eventbox[ 6][\npudarkgray]{午餐}
+    \eventbox[12][\npulightgray]{分会场报告5\\ \sFive}
+    \eventbox[3][\npudarkgray]{\atb}
+    \eventbox[12][\npulightgray]{分会场报告6\\ \sSix}
+    \eventbox[6][\npudarkgray]{\centering {晚餐}}
+  \end{tabular}}
+\end{tabular}}
+\end{schedule}
+\vskip20pt
+{\bf 注1:  常务理事会于7月20日19:00在19号楼第三会议室举行。}\\
+{\bf 注2:  计算数学青年优秀论文奖评选于7月21日19:30在19号楼第三会议室举行。}\\
+{\bf 注3:  分会场主持人和组织者可以在不影响茶歇时间的前提下根据报告数目酌情调整报告时间。}
+% {\bf 注3:  T表示分组报告, S表示专题讨论, 详见\hyperlink{npufulu}{附录}}
+
+\clearpage
+\section{粗略主题分类及其编号}
+\begin{center}
+\begin{tabular}{|c|p{11cm}|}
+\hline T01 & 微分方程数值计算及应用 \\
+\hline T02 & 流体力学中的数值计算 \\
+\hline T03 & 优化、控制及反问题 \\
+\hline T04 & 数值代数 \\
+\hline T05 & 谱方法、数值逼近与计算几何 \\
+\hline T06 & 有限元和边界元方法 \\
+\hline T07 & 多重网格技术、区域分解及并行计算 \\
+\hline T08 & 自适应方法 \\
+\hline T09 & 分数阶方程 \\
+\hline T10 & 随机微分方程 \\
+\hline T11 & 有限差分法及其应用 \\
+\hline T12 & 移动网格和无网格及有限体积法 \\ \hline
+\end{tabular}
+\end{center}
+\section{专题讨论会及其编号}
+\begin{center}
+\begin{tabular}{|c|p{11cm}|}
+\hline S01& PDE并行、快速算法研究进展 \\
+\hline S02& 非线性色散方程的数值方法 \\
+\hline S03& 界面问题的建模与计算 \\
+\hline S04& 材料科学的可计算建模与计算方法 \\
+\hline S05& \makecell[l]{Recent advances in nonstandard discretization methods \\ in scientific and engineering computation} \\
+\hline S06& 偏微分方程反问题及其计算 \\
+\hline S07& 流体力学方程的数学理论和数值方法 \\
+\hline S08& 无界域数学物理方程的数值方法及其应用 \\
+\hline S09& Krylov子空间算法及预处理技术 \\
+\hline S10& 有限体积法理论及其应用 \\
+\hline S11& 最优化专题 \\
+\hline S12& 稀有事件及其鞍点问题的计算与应用 \\
+\hline S13& 生命科学中的计算数学 \\ \hline
+\end{tabular}
+\end{center}
+
+\chapter{主会场日程}
+\input{table.tex}
+
+\raggedbottom
+\chapter{分会场和专题报告日程简表}
+\input{auto_list_short.tex}
+
+\chapter{分会场和专题报告详细内容}
+\clearpage
+\input{auto_list_long.tex}
+
+\chapter{摘要列表}
+\CTEXsetup[name={,}, number={}, format={\zihao{-3}\it\bf}]{section} % \arabic{section}
+\CTEXsetup[name={,}, number={}, format+={}]{subsection} % \arabic{section}
+
+\section{冯康科学计算奖获得者报告}
+%\plenaryItem{动理学方程的模型约化}{李若}{教授}{西安交通大学}{7月22日, 08:30--09:15}
+\npuabstract{动理学方程的模型约化}{abs30001}{\npufootstartold{李若}{李若}}{在本报告中，我会介绍今年我们最初为玻尔兹曼方程做矩模型约化所发展起来的理论，此理论可以应用于一般形式的动理学方程，并给出具有对称双曲形式的约化模型，从而使得约化模型具有局部适定性。 }{\npufootend{李若}{北京大学}{rli@math.pku.edu.cn}}
+%\plenaryItem{Multiple Relational Ranking in Tensor: Theory, Algorithms and Applications}{吴国宝}{教授}{香港浸会大学}{7月22日, 08:30--09:15}
+\npuabstract{Multiple Relational Ranking in Tensor: Theory, Algorithms and Applications}{abs30002}{\npufootstartold{吴国宝}{吴国宝}}{In this talk, I discuss multiple relational ranking problems arising from tensor data. Multi-Rank algorithms and its relevant mathematical results (convergence, higher-order Markov chains, transition probability tensors and perturbation bounds) are presented. Applications in data mining and information retrieval are given to demonstrate the performance and usefulness of the proposed algorithm. }{\npufootend{吴国宝}{香港浸会大学}{mng@math.hkbu.edu.hk}}
+
+\section{特邀大会报告}
+%\plenaryItem{大数据分析技术图谱与研究举例}{徐宗本}{院士}{西安交通大学}{7月22日, 08:30--09:15}
+\npuabstract{大数据分析技术图谱与研究举例}{abs20001}{\npufootstartold{徐宗本}{徐宗本}}{大数据分析与处理依赖特定的计算模式与全新的计算方法（称为大数据算法），设计创新的大数据计算模式与大数据算法是大数据的最核心技术，也是一个全新的领域。本报告引进大数据算法的谱系，并引进最优化理论与方法中的ADMM（Alternating Direction Method of Multipliers）作为大数据计算模式与算法设计的基本框架。我们说明：ADMM非常适宜于实现“数据分解、变量分组、随机化”等大数据算法设计原理，并通过应用于大数据回归、超大规模线性方程组等问题展示ADMM方法的有效性。我们也说明：ADMM能够解释作深度学习网络，从而ADMM理论与深度学习方法结合，能形成一类全新的“模型与数据”双驱动的大数据学习技术。该类技术能很好解决深度学习拓扑结构确定难的问题，也能很好解决ADMM难以用于模型族的问题。我们运用新技术学习MRI压缩感知成像取得了目前已知最好的效果，验证了新技术的可用性与高效性。}{\npufootend{徐宗本}{西安交通大学}{zbxu@mail.xjtu.edu.cn}}
+%\plenaryItem{}{陈  龙}{教授}{University of California at Irvine}{7月22日, 09:15--10:00}
+\npuabstract{Mixed Finite Element Methods based on Differential Complexes}{abs20002}{\npufootstartold{陈  龙}{陈  龙}}{We shall present a systematically study of the mixed finite element methods based on differential complexes and the corresponding Helmholtz decomposition.\par
+Firstly, we use the differential complexes to construct fast solvers for the saddle point systems arising from the mixed finite element methods. We discuss two type of fast solvers:
+\begin{itemize}
+ \item Constraint optimization methods: Darcy equations, Stokes equations, and Kirchhoff plate bending problems. 
+ \item Preconditioners based on approximated block factorization: the Hodge Laplacian, Maxwell and the linear elasticity equations
+\end{itemize}
+Secondly, we analyze adaptive finite element methods based on the differential complexes. In particular, we discuss
+\begin{itemize}
+ \item A posterior error estimates for symmetric conforming mixed finite elements for linear elasticity
+ \item Convergence of adaptive mixed finite element methods for the Hodge Laplacian equations
+\end{itemize}
+Finally, we utilize the Helmholtz decomposition to decouple the mixed formulation of high order elliptic equations into combination of Poisson-type and Stokes-type equations. Examples include but not limit to: the biharmonic equation, the tri-harmonic equation, the fourth order curl equation, HHJ mixed method for plate problem, and Reissner-Mindlin plate model etc.}{\npufootend{陈龙}{University of California at Irvine,Beijing Institute for Scientific and Engineering Computing}{chenlong@math.uci.edu}}
+\npuabstract{Fully Nonlinear Second Order PDEs and Their Numerical Solutions}{abs20003}{\npufootstartold{凤小兵}{凤小兵}}{ In this talk I will present some latest advances on developing efficient numerical methods for fully nonlinear second (and first) order PDEs such as the Monge-Ampere type equations and Hamilton-Jacobi-Bellman equations. The focus of the talk will be on discussing various approaches/methods/ideas and their pros and cons for constructing such methods which can reliably approximate viscosity solutions of those fully nonlinear PDEs. Numerical expriments and applications as well as open problems in numerical fully nonlinear PDEs will also be presented.}{\npufootend{凤小兵}{美国田纳西大学, 西北工业大学}{xfeng@math.utk.edu}}
+%\plenaryItem{Alternating direction methods with multipliers for optimization problems involving nonconvex functions}{韩德仁}{教授}{南京师范大学}{7月22日, 11:15--12:00}
+\npuabstract{Alternating direction methods with multipliers for optimization problems involving nonconvex functions}{abs20004}{\npufootstartold{韩德仁}{韩德仁}}{Alternating direction method of multiplier (ADMM) is among the most efficient methods for solving the minimization problems where the objective function is the sum of several separable functions and the constraint is linear. While there are a lot of variants and convergence analysis for the convex case, the convergence for the problems involving nonconvex functions is in its infancy. In this talk, we introduce some advances for ADMM along this line. We split the results into two classes: the first class is based on the Kurdyka- Lojasiewicz inequality, and the second class is for some special models. Under some further conditions on the problem’s data, we also analyze their rates of convergence.}{\npufootend{韩德仁}{南京师范大学}{handeren@njnu.edu.cn}}
+%\plenaryItem{千万核可扩展全隐式求解器：算法、实现与应用}{杨  超}{研究员}{中国科学院软件研究所}{7月23日, 08:30--09:15}
+\npuabstract{千万核可扩展全隐式求解器：算法、实现与应用}{abs20005}{\npufootstartold{杨  超}{杨  超}}{ 隐式求解器在大规模科学与工程计算应用领域具有广泛用途，是提高不少具体应用问题实际模拟效率的推进器。近年来，高性能计算机硬件体系结构呈现向异构、众核发展的趋势，隐式求解器的设计遇到了前所未有的挑战。我们的研究团队历经近十年努力，在面向当代甚至未来高性能计算机体系结构的隐式求解器设计方面取得进展，相关工作于2016年获得由美国计算机学会颁发的“戈登•贝尔”奖（ACM Gordon Bell Prize）。本次报告中，我将简单介绍我对“戈登•贝尔”奖的一些个人理解，并详细介绍我们2016年度的获奖工作。}{\npufootend{杨  超}{中国科学院软件研究所}{yangchao@iscas.ac.cn}}
+%\plenaryItem{Weak Galerkin Finite Element Scheme and Its Applications}{张  然}{教授}{吉林大学}{7月23日, 09:15--10:00}
+\npuabstract{Weak Galerkin Finite Element Scheme and Its Applications}{abs20006}{\npufootstartold{张  然}{张  然}}{The weak Galerkin (WG)  finite element method is a newly developed and efficient numerical technique for solving partial differential equations (PDEs). It was first introduced and analyzed for second order elliptic equations and further applied to several other model equations, such as the  Brinkman equations, the eigenvalue problem of PDEs to demonstrate its power and efficiency as an emerging new numerical method. This talk introduces some progress on the WG scheme, which includes the applications on Brinkman problems, etc.}{\npufootend{张  然}{吉林大学}{zhangran@jlu.edu.cn}}
+%\plenaryItem{大规模矩阵近似的随机算法}{张志华}{教授}{北京大学}{7月23日, 10:30--11:15}
+\npuabstract{大规模矩阵近似的随机算法}{abs20007}{\npufootstartold{张志华}{张志华}}{许多机器学习问题可以被关联为矩阵分解问题，因此求解大规模的矩阵分解问题是机器学习一个非常具有挑战性的课题。这个报告将关注于求解问题的随机算法，它是理论计算机科学、数值线性代数和应用统计分析的一个交叉领域。具体地，报告讨论矩阵乘积、SVD和CUR分解等经典问题的随机近似算法。同时，将讨论矩阵近似技术在二阶优化算法的应用，包含子采样牛顿方法、概略牛顿方法以及非精确牛顿方法等。 }{\npufootend{张志华}{北京大学}{zhzhang@math.pku.edu.cn}}
+%\plenaryItem{三维不可压磁流体方程组的并行计算方法}{郑伟英}{研究员}{中科院数学与系统研究院}{7月23日, 11:15--12:00}
+\npuabstract{三维不可压磁流体方程组的并行计算方法}{abs20008}{\npufootstartold{郑伟英}{郑伟英}}{三维不可压磁流体（MHD）方程组描述带电流体在强磁场作用下的动力学行为，在磁约束聚变装置实验包层的数值模拟等领域有重要应用，流体的高Hartmann数给三维数值模拟带来很大挑战。本报告将讨论三方面的内容：（1）MHD方程组的守恒型有限元方法，使得离散速度和磁场同时满足无散度约束条件；（2）离散MHD方程组的健壮求解方法和工程Benchmark算例的并行计算；（3）稳态MHD方程组的预处理技术和健壮求解方法。}{\npufootend{郑伟英}{中科院数学与系统研究院}{zwy@lsec.cc.ac.cn}}
+%
+\input{auto_list_abst.tex}
+%
+\backmatter
+% \renewcommand{\appendixtocname}{附录}
+% \renewcommand{\appendixpagename}{附录}
+% \begin{appendices}
+% \chapter*{\hypertarget{npufulu}{附录}}
+% \CTEXsetup[name={,}, number={}, format={\bf\centering}]{section}
+% \end{appendices}
+\printindex
+\hascover{%
+\pdfbookmark[0]{封底}{anchor1}%
+\includepdf[pages=-,width=\paperwidth,height=\paperheight]{figures/back.pdf}%
+}
+
+\end{document}

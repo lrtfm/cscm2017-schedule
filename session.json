@@ -1,0 +1,38 @@
+[
+    {
+        "session_name": "分会场报告1",
+        "date": "7月21日 14:00-16:00",
+        "start_time": "14:00",
+        "topics": ["T03-1,\\xiaoyi", "S02-1,\\xiaoer", "S06-1,\\xiaosan", "S08-1,\\zhongyi", "S11-1,\\zhonger", "T01-1,\\zhongsan", "S07-1,\\dayi", "T06-1,\\daer", "T09-1,\\dasan", "S13-1,\\npusroom"]
+    },
+    {
+        "session_name": "分会场报告2",
+        "date": "7月21日 16:20-18:00",
+        "start_time": "16:20",
+        "topics": ["T03-2,\\xiaoyi", "T05-1,\\xiaoer", "S06-2,\\xiaosan", "S08-2,\\zhongyi", "S11-2,\\zhonger", "T01-2,\\zhongsan", "S07-2,\\dayi", "T06-2,\\daer", "T09-2,\\dasan", "S13-2,\\npusroom"]
+    },
+    {
+        "session_name": "分会场报告3",
+        "date": "7月22日 14:00-16:00",
+        "start_time": "14:00",
+        "topics": ["S09-1,\\xiaoyi", "S04-1,\\xiaoer", "S03-1,\\xiaosan", "T07-1,\\zhongyi", "S01-1,\\zhonger", "T01-3,\\zhongsan", "S05-1,\\dayi", "T06-3,\\daer", "T09-3,\\dasan"]
+    },
+    {
+        "session_name": "分会场报告4",
+        "date": "7月22日 16:20-18:00",
+        "start_time": "16:20",
+        "topics": ["T05-2,\\xiaoyi", "S04-2,\\xiaoer", "S03-2,\\xiaosan", "S08-3,\\zhongyi", "S01-2,\\zhonger", "T02-3,\\zhongsan", "S05-2,\\dayi", "T06-4,\\daer", "T09-4,\\dasan"]
+    },
+    {
+        "session_name": "分会场报告5",
+        "date": "7月23日 14:00-16:00",
+        "start_time": "14:00",
+        "topics": ["S12-1,\\xiaoyi", "T11-1,\\xiaoer", "T10-1,\\xiaosan", "T12-1,\\zhongyi", "S10-1,\\zhonger", "T04-1,\\zhongsan", "T02-1,\\dayi", "T08-1,\\daer", "T06-5,\\dasan"]
+    },
+    {
+        "session_name": "分会场报告6",
+        "date": "7月23日 16:20-18:00",
+        "start_time": "16:20",
+        "topics": ["S12-2,\\xiaoyi", "S01-3,\\xiaoer",                    "T12-2,\\zhongyi", "S10-2,\\zhonger", "T04-2,\\zhongsan", "T02-2,\\dayi", "T08-2,\\daer", "T09-5,\\dasan"]
+    }
+]
