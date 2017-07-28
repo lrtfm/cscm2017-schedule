@@ -1,6 +1,6 @@
 * 第十一届计算数学年会程序册
 ** 依赖
-- Python 2.7
+- Python :: Python 2.7 
 - zhmakeindex :: 中文索引生成工具. 下载地址 https://www.ctan.org/pkg/zhmakeindex
                  或者 https://github.com/leo-liu/zhmakeindex
 - TeX Live :: 网址 http://tug.org/texlive/
